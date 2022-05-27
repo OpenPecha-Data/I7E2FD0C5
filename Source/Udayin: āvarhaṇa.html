@@ -1,0 +1,602 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=427' accesskey='1'>MSV 1,11: Pāṇḍulohitakavastu</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>MSV 1,11: Pāṇḍulohitakavastu<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_427[2965]" value="2965" id="lancheckbox" checked >Sanskrit: Pāṇḍ-v san</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_427[2964]" value="2964" id="lancheckbox" checked >Tibetan: Derge Kj ’dul ba ga</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_427[2967]" value="2967" id="lancheckbox" checked >Sanskrit: Comments</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="427">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="427">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='427'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v427">Search in MSV 1,11: Pāṇḍulohitakavastu</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=427'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=427'>MSV 1,11: Pāṇḍulohitakavastu</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=427" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="43133.Pratikriyāvastūddāna|43134.Pāṇḍulohitakavastūddāna|43135.Pāṇḍulohitaka:tarjanīyaṃkarma|43136.Śreyaka:nigarhanīyaṃkarma|43137.Aśvaka&Punarvasaka:pravāsanīyaṃkarma|43138.Uttara:pratisaṃharanīyaṃkarma|43139.Chanda:1.āpatteradarśanāyotkṣepaṇīyaṃkarma,2.āpatterapratikarmāyotkṣepaṇīyaṃkarma|43140.Ariṣṭa:apratiniḥsṛṣṭepāpakedṛṣṭigatautkṣepaṇīyaṃkarma|43141.Udayin:parivāsa|43142.Udayin:mūlaparivāsa|43143.Udayin:mūlāpakaṛṣa|43144.Udayin:mānāpya|43145.Udayin:āvarhaṇa|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_43133.Pratikriyāvastūddāna" border=0 hspace=2><a id="href_43133.Pratikriyāvastūddāna" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=427&mid=696457&level=1&cid=393477" class="ajax_tree0">Pratikriyāvastūddāna
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_43134.Pāṇḍulohitakavastūddāna" border=0 hspace=2><a id="href_43134.Pāṇḍulohitakavastūddāna" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=427&mid=696458&level=1&cid=393478" class="ajax_tree0">Pāṇḍulohitakavastūddāna
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_43135.Pāṇḍulohitaka:tarjanīyaṃkarma" border=0 hspace=2><a id="href_43135.Pāṇḍulohitaka:tarjanīyaṃkarma" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=427&mid=696459&level=1&cid=393479" class="ajax_tree0">Pāṇḍulohitaka: tarjanīyaṃ karma
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_43136.Śreyaka:nigarhanīyaṃkarma" border=0 hspace=2><a id="href_43136.Śreyaka:nigarhanīyaṃkarma" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=427&mid=696499&level=1&cid=393499" class="ajax_tree0">Śreyaka: nigarhanīyaṃ karma
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_43137.Aśvaka&Punarvasaka:pravāsanīyaṃkarma" border=0 hspace=2><a id="href_43137.Aśvaka&Punarvasaka:pravāsanīyaṃkarma" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=427&mid=696525&level=1&cid=393512" class="ajax_tree0">Aśvaka & Punarvasaka: pravāsanīyaṃ karma
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_43138.Uttara:pratisaṃharanīyaṃkarma" border=0 hspace=2><a id="href_43138.Uttara:pratisaṃharanīyaṃkarma" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=427&mid=696549&level=1&cid=393519" class="ajax_tree0">Uttara: pratisaṃharanīyaṃ karma
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_43139.Chanda:1.āpatteradarśanāyotkṣepaṇīyaṃkarma,2.āpatterapratikarmāyotkṣepaṇīyaṃkarma" border=0 hspace=2><a id="href_43139.Chanda:1.āpatteradarśanāyotkṣepaṇīyaṃkarma,2.āpatterapratikarmāyotkṣepaṇīyaṃkarma" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=427&mid=696632&level=1&cid=393538" class="ajax_tree0">Chanda: 1. āpatter adarśanāyotkṣepaṇīyaṃ karma, 2. āpatter apratikarmāyotkṣepaṇīyaṃ karma
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_43140.Ariṣṭa:apratiniḥsṛṣṭepāpakedṛṣṭigatautkṣepaṇīyaṃkarma" border=0 hspace=2><a id="href_43140.Ariṣṭa:apratiniḥsṛṣṭepāpakedṛṣṭigatautkṣepaṇīyaṃkarma" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=427&mid=696655&level=1&cid=393546" class="ajax_tree0">Ariṣṭa: apratiniḥsṛṣṭe pāpake dṛṣṭigata utkṣepaṇīyaṃ karma
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_43141.Udayin:parivāsa" border=0 hspace=2><a id="href_43141.Udayin:parivāsa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=427&mid=696682&level=1&cid=393554" class="ajax_tree0">Udayin: parivāsa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_43142.Udayin:mūlaparivāsa" border=0 hspace=2><a id="href_43142.Udayin:mūlaparivāsa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=427&mid=696703&level=1&cid=393559" class="ajax_tree0">Udayin: mūlaparivāsa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_43143.Udayin:mūlāpakaṛṣa" border=0 hspace=2><a id="href_43143.Udayin:mūlāpakaṛṣa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=427&mid=696734&level=1&cid=393564" class="ajax_tree0">Udayin: mūlāpakaṛṣa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_43144.Udayin:mānāpya" border=0 hspace=2><a id="href_43144.Udayin:mānāpya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=427&mid=696779&level=1&cid=393569" class="ajax_tree0">Udayin: mānāpya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_43145.Udayin:āvarhaṇa" border=0 hspace=2><a id="href_43145.Udayin:āvarhaṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=427&mid=696832&level=1&cid=393574" class="ajax_tree0">Udayin: āvarhaṇa
+</td></tr></table>
+<script language=javascript>test('43145.Udayin:āvarhaṇa|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=427&amp;mid=696832&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=427&amp;cid=393574&amp;mid=696832&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=427&amp;cid=393574&amp;mid=696832&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><div class='kilderef' id='3204914'></div><div class='clear'></div><span id='3204914bi' class='paragraph'>
+							so ’pareṇa samayena saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsaḥ antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitaḥ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitaḥ ṣaḍrātraṃ cīrṇamānāpyo bhikṣūṇām ārocayaty |&nbsp;</span><span id='3204915bi' class='paragraph'>
+						 aham asmy āyuṣmann udāyī bhikṣuḥ saṃghāvaśeṣām āpattim āpannaḥ saṃcintyaśukravisṛṣṭisamutthitām ardhamāsapraticchannāṃ |&nbsp;</span><span id='3204916bi' class='paragraph'>
+						 tena mayā udāyinā bhikṣuṇā asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ saṃghād ardhamāsaparivāso yācitaḥ |&nbsp;</span><span id='3204917bi' class='paragraph'>
+						 dattaḥ saṃghena mamodāyino bhikṣor asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyā ardhamāsaparivāsaḥ |&nbsp;</span><span id='3204918bi' class='paragraph'>
+						 so ’haṃ pārivāsika eva san* saṃghāvaśeṣām āpattim āpanno antarāpattiṃ pūrvāpattipratirūpāṃ praticchannāṃ |&nbsp;</span><span id='3204919bi' class='paragraph'>
+						 tena mayā udāyinā bhikṣuṇā asyāḥ saṃghāvaśeṣāyā āpatter antarāpatteḥ pūrvāpattipratirūpāyāḥ (300r1 = GBM 912) praticchannāyāḥ saṃghān mūlaparivāso yācitaḥ |&nbsp;</span><span id='3204920bi' class='paragraph'>
+						 dattaḥ saṃghena mamodāyino bhikṣor asyāḥ saṃghāvaśeṣāyā āpatter antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaḥ |&nbsp;</span><span id='3204921bi' class='paragraph'>
+						 so ’haṃ mūlapārivāsika eva san* saṃghāvaśeṣām āpattim āpannaḥ pratyantarāpattim antarāpattipratirūpāṃ praticchannāṃ |&nbsp;</span><span id='3204922bi' class='paragraph'>
+						 tena mayā udāyinā bhikṣuṇā asyāḥ saṃghāvaśeṣāyāḥ āpatter pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyāḥ saṃghān mūlāpakarṣo yācitaḥ |&nbsp;</span><span id='3204923bi' class='paragraph'>
+						 dattaḥ saṃghena mamodāyino bhikṣor asyāḥ saṃghāvaśeṣāyāḥ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaḥ |&nbsp;</span><span id='3204924bi' class='paragraph'>
+						 tena mayā udāyinā bhikṣuṇā saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāpraticchannāyāḥ paryuṣitaparivāsena antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitena pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitena saṃghāt ṣaḍrātraṃ mānāpyaṃ yācitaṃ |&nbsp;</span><span id='3204925bi' class='paragraph'>
+						 dattaṃ saṃghena mamodāyino bhikṣor asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsasya antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitasya pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitasya ṣaḍrātraṃ mānāpyaṃ |&nbsp;</span><span id='3204926bi' class='paragraph'>
+						 so ’ham udāyī bhikṣur asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsaḥ antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitaḥ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitaḥ ṣaḍrātraṃ caritamānāpayaṃ | kiṃ mayā karaṇīyaṃ ity |&nbsp;</span><span id='3204927bi' class='paragraph'>
+						 etat prakaraṇaṃ bhikṣavo bhagavata ārocayanti |&nbsp;</span><span id='3204928bi' class='paragraph'>
+						 bhagavān āha | āvarhata yūyaṃ bhikṣava udāyinaṃ bhikṣum asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsam āntarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitaṃ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitaṃ ṣaḍrātraṃ caritamānāpyam iti | yo vā punar anyo ’py evaṃjātīyaḥ |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><div class='kilderef' id='3204456'></div><div class='clear'></div><span id='3204456bi' class='paragraph'>
+							de dus gźan źig na ched du bsams te khu ba phyuṅ ba las gyur ba’i dge ’dun lhag ma’i ltuṅ ba zla ba phyed bcabs pa’i sbo ba spyad | ltuṅ ba bar ma (5) ltuṅ ba sṅa ma dag ’dra ba bcabs pa’i gźi nas spo ba spyad | ltuṅ ba bar ma dag ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba’i gźi nas bslaṅ ba spyad | źag drug gi mgu bar bya ba spyad zin nas dge sloṅ rnams la smras pa |&nbsp;</span><span id='3204457bi' class='paragraph'>
+						 tshe daṅ ldan pa dag bdag dge sloṅ ’char ka la ched du bsams te (6) khu ba phyuṅ ba sal gyur pa’i dge ’dun lhag ma’i ltuṅ ba byuṅ ba zla ba phyed bcabs te |&nbsp;</span><span id='3204458bi' class='paragraph'>
+						 bdag dge sloṅ ’acara kas ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag mi ltuṅ ba zla ba pyed bcabs pa dge ’dun las zla ba phyed kyi spo ba gsol te |&nbsp;</span><span id='3204459bi' class='paragraph'>
+						 dge ’dun gyis bdag dge (7) sloṅ ’char ka la ched du bsams te khu baphyuṅa ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba zla ba phyed bcabs pa la zla ba phyed kyi spo ba stsal te&nbsp;</span><span id='3204460bi' class='paragraph'>
+						 | bdag spo ba bgyid bźin pa las dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma lhuṅ ba sṅa ma daṅ ’dra ba byuṅ ba bcabs te |&nbsp;</span><span id='3204461bi' class='paragraph'>
+						 bdag dge sloṅ (161a1) ’char kas dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma ltuṅ bsga mdaṅ ’dra ba byuṅ ba bcabs pa dge ’dun las gźi nas spo ba gsol te |&nbsp;</span><span id='3204462bi' class='paragraph'>
+						 dge ’dun gyis bdag dge sloṅ ’char ka la dge ’dun lhag mi ltuṅ ba ltuṅ ba bar ma ltuṅ bsṅam daṅ ’dra ba byuṅ ba bcabs pa (2) la gźi nas spo ba stsal te |&nbsp;</span><span id='3204463bi' class='paragraph'>
+						 bdag gźi nas spo ba bgyid bźin pa las dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas te byuṅ ba bcabs nas |&nbsp;</span><span id='3204464bi' class='paragraph'>
+						 bdag dge sloṅ ’char kas dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma dag ’dra ba yaṅ bzlas te byuṅ ba bcabs pa dge (3) ’dun las gźi nas bslaṅ ste sbo ba gsol nas |&nbsp;</span><span id='3204465bi' class='paragraph'>
+						 dge ’dun gyis bdag dge soṅ ’acara ka la dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas te byuṅ ba bcabs pa la gźi nas bslaṅ ba stsal te |&nbsp;</span><span id='3204466bi' class='paragraph'>
+						 bdag dge sloṅ ’char kas ched du bsams te khu ba phyuṅ ba las gyur (4) pa’i dge ’dun lhag ma’i ltuṅ ba byuṅ bzla ba pyed bcabs pi spo ba spyad lags | ltuṅ ba bar ma ltuṅ ba sga ma dag ’dra ba byuṅ ba bcabs pa’i gźi nas spo ba spyad lags | ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba’i gźi nas bslaṅ ba spyad lags te | dge ’dun las (5) źag drug gi mgu bar bgyi ba gsol nas |&nbsp;</span><span id='3204467bi' class='paragraph'>
+						 dge ’dun gyis bdag dge sloṅ ’char ka ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba zla ba phyed bcabs pa’i spo ba spyad lags | ltuṅ ba bar ma ltuṅ ba sṅa ma daṅ ’dra ba byuṅ ba bcabs pa’i gźi nas spo ba spyad (6) lags | ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba gźi nas bslaṅ ba spyad lags pa la | źag drug gi mgu bar bgyi ba stsal te |&nbsp;</span><span id='3204468bi' class='paragraph'>
+						 bdag dge sloṅ ’char kas ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba zla ba phyed bcabs pa’i spo ba (7) spyad lags | ltuṅ ba bar ma ltuṅ bsga ma dag ’dra ba byuṅ ba bcabs pa’i gźi nas spo ba spyad lags | ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba gźi nas spo ba sbyad lags | źag drug gi mgu bar bgyi ba spyad lags na | bdag gis ci dag bgyi&nbsp;</span><span id='3204469bi' class='paragraph'>
+						 źes pa’i skabs (161b1) de dge sloṅ rnams kyis bcom ldan ’das la gsol pa daṅ |&nbsp;</span><span id='3204470bi' class='paragraph'>
+						 bcom ldan ’das kyi bka’ stsal pa | dge sloṅ dag khyed kyis dge sloṅ ’char ka ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba byuṅ ba zla ba phyed bcabs pa’i spo ba spyad pa daṅ | ltuṅ (2) ba bar ma ltuṅ ba sṅa ma daṅ ’dra ba byuṅ ba bcabs pa’i gźi nas spo ba spyad pa daṅ | ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba’i gźi nas bslaṅ ba spyad pa daṅ | źag drug gi mgu bar bya ba spyad zin pa daṅ | gźan yaṅ de lta bu daṅ mthun pa su yaṅ ruṅ ba la dbyuṅ (3) ba byos śig |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><div class='kilderef' id='3205373'></div><div class='clear'></div><span id='3205373bi' class='paragraph'>
+							Udayin: āvarhaṇa, <i>removal, freeing</i> the monk from the penances.&nbsp;</span><span id='3205374bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205375bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205376bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205377bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205378bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205379bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205380bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205381bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205382bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205383bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205384bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205385bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205386bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205387bi' class='paragraph'>
+						 .&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3204929bi' class='paragraph'>
+							evaṃ ca punar avahitavyaḥ<a class='fotnote cn' name='FN2965cn1' href='#N2965cn1'><sup>1</sup></a>
+ | śayanāsanaprajñaptiṃ kṛtvā gaṇḍīm ākoṭya pṛṣṭavācikayā bhikṣūn samanuyujya sarvasaṃghe saṃniṣaṇṇe saṃnipatite udāyinā bhikṣuṇā vṛddhānte utkuṭukena sthitvā añjaliṃ pragṛhya idaṃ syād vacanīyam ·&nbsp;</span><div style='' id='1' class='note cn'>1.<a class="internt" name='N2965cn1' href='#FN2965cn1'> read āvarhayitavyaḥ, supported by Tibetan</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='3204471bi' class='paragraph'>
+							dbyuṅ ba ni ’di ltar bya ste | gnas mal bśams la gaṇḍī brduṅs te dris pa’i tshig gis dge sloṅ rnams la yaṅ dag par bsgo la | dge ’dun thams cad tshogs śiṅ mthun par gyur pa daṅ | dge sloṅ ’char kas rgan pa’i mthar tsog tsog por ’dug ste thal (4) mo sbyar ba btud nas ’di skad ces |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3205388bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3204930bi' class='paragraph'>
+							śṛṇotu bhadantaḥ saṃghaḥ |&nbsp;</span><span id='3204931bi' class='paragraph'>
+						 aham udāyī bhikṣuḥ saṃghāvaśeṣām āpattim āpannaḥ saṃcintyaśukravisṛṣṭisamutthitām ardhamāsapraticchannāṃ |&nbsp;</span><span id='3204932bi' class='paragraph'>
+						 tena mayā udāyinā bhikṣuṇā asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ saṃghād ardhamāsaṃ parivāso yācitaḥ |&nbsp;</span><span id='3204933bi' class='paragraph'>
+						 dattaḥ saṃghena mamodāyino bhikṣor asyāḥ (300v1 = GBM 913) saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ ardhamāsaṃ parivāsaḥ |&nbsp;</span><span id='3204934bi' class='paragraph'>
+						 so ’haṃ pārivāsika eva san* saṃghāvaśeṣām āpattim āpannaḥ antarāpattiṃ pūrvāpattipratirūpāṃ praticchannāṃ |&nbsp;</span><span id='3204935bi' class='paragraph'>
+						 tena mayā udāyinā bhikṣuṇā asyāḥ saṃghāvaśeṣāyā āpatteḥ antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyāḥ saṃghān mūlaparivāso yācitaḥ |&nbsp;</span><span id='3204936bi' class='paragraph'>
+						 dattaḥ saṃghena mamodāyino bhikṣor asyāḥ saṃghāvaśeṣāyā āpatter antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaḥ |&nbsp;</span><span id='3204937bi' class='paragraph'>
+						 so ’haṃ mūlapārivāsika eva san* saṃghāvaśeṣām āpattim āpannaḥ pratyantarāpattim antarāpattipratirūpāṃ praticchannāṃ |&nbsp;</span><span id='3204938bi' class='paragraph'>
+						 tena mayā udāyinā bhikṣuṇā asyāḥ saṃghāvaśeṣāyāḥ āpatteḥ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyāḥ saṃghān mūlāpakarṣo yācitaḥ |&nbsp;</span><span id='3204939bi' class='paragraph'>
+						 dattaḥ saṃghena mamodāyino bhikṣor asyāḥ saṃghāvaśeṣāyāḥ pratyantarāpatteḥ antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaḥ |&nbsp;</span><span id='3204940bi' class='paragraph'>
+						 tena mayā udāyinā bhikṣuṇā asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsena antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitena pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitena ṣaḍrātraṃ mānāpyaṃ yācitaṃ |&nbsp;</span><span id='3204941bi' class='paragraph'>
+						 dattaṃ saṃghena mamodāyino bhikṣor asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsasya antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitasya pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitasya ṣaḍrātramānāpyaṃ |&nbsp;</span><span id='3204942bi' class='paragraph'>
+						 so ’ham udāyī bhikṣur asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsaḥ antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitaḥ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitaḥ ṣaḍrātraṃ cīrṇamānāpyaṃ saṃghād āvarhaṇaṃ yāce |&nbsp;</span><span id='3204943bi' class='paragraph'>
+						 āvarhatu māṃ bhadantāḥ saṃghaḥ udāyinaṃ bhikṣum asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsam āntarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitaṃ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitaṃ ṣaḍrātraṃ cīrṇamānāpyam anukaṃpakaḥ anukaṃpām upādāyeti · evaṃ dvir api trir api |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='3204472bi' class='paragraph'>
+							dge ’dun btsun brnams rnams gsan du gsal |&nbsp;</span><span id='3204473bi' class='paragraph'>
+						 bdag dge sloda’achara kas ched du bsams te khu ba phyuṅ ba las phyur pa’i dge ’dun lhag ma’i ltuṅ ba byuṅ ba zla ba phyed bcabs te |&nbsp;</span><span id='3204474bi' class='paragraph'>
+						 bdag dge sloṅ ’char kas ched du bsams te khu ba phyuṅ ba (5) las gyur pa’i dge ’dun lhag ma’i ltuṅ ba zla ba phyed bcabs pa dge ’dun las spo ba gsol te |&nbsp;</span><span id='3204475bi' class='paragraph'>
+						 dge ’dun gyis bdag dge sloṅ ’char ka la ched du bsams te khu ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba byuṅ ba zla ba phyed bcabs pa la zla ba phyed kyi spo ba stsal te |&nbsp;</span><span id='3204476bi' class='paragraph'>
+						 bdag (6) spo ba bgyid bźin pa las dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma ltuṅ ba sṅa ma daṅ ’dra ba byug ba bcabs te |&nbsp;</span><span id='3204477bi' class='paragraph'>
+						 bdag dge sloṅ ’char kas dge ’dun lhag ma’i ltu.uda ba ltuṅ ba bar ma ltuṅ pa sṅa ma daṅ ’dra ba byuṅ ba bcabs pa dge ’dun las gźi nas spo ba gsol te |&nbsp;</span><span id='3204478bi' class='paragraph'>
+						 dge ’dun (7) gyis bdag dge sloṅ ’char ka la dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma ltuṅ ba sṅa ma daṅ ’dra ba byuṅ ba bcabs pa la gźi nas spo ba stsal te |&nbsp;</span><span id='3204479bi' class='paragraph'>
+						 bdag gźi nas spo ba bgyid bźin pa las dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas te byuṅ ba bcabs nas |&nbsp;</span><span id='3204480bi' class='paragraph'>
+						 (162a1) bdag dge sloṅ ’char kas dge ’dun lhag ma’i ltuṅ ba bar ma daṅ ’dra ba maṅ bzlas te byuṅ ba bcabs pa dge ’dun las gźi nas bslaṅ ste spo ba gsol nas |&nbsp;</span><span id='3204481bi' class='paragraph'>
+						 dge ’dun gyis bdag dge sloṅ ’achaRa ka la dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma daṅ ’dra ba yaṅ (2) bzlas te byuṅ bcabs pa la gźi nas bslaṅ ba stsal te |&nbsp;</span><span id='3204482bi' class='paragraph'>
+						 bdag dge sloṅ ’char kas ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba zla ba phyed bcabs pa’i spo ba spyad lags | ltuṅ ba bar ma ltuṅ ba sṅa ma daṅ ’dra ba byuṅ ba bcabs pa’i gźi nas spo ba (3) spyad lags | ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba gźi nas bslaṅ ba spyad lags nas | źag drug gi mgu bar bgyi ba gsol te |&nbsp;</span><span id='3204483bi' class='paragraph'>
+						 dge ’dun gyis pa dag dge sloṅ ’char ka la ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ bzlab phyed (4) bcabs pa’i spo ba spyad lags | ltuṅ ba bar ma ltuṅ ba sṅa ma daṅ ’dra ba byuṅ ba bcabs pa’i gźi nas spo ba spyad lags | ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba’i gźi nas bslaṅ ba spyad lags pa la | źag drug gi mgu bar bgyi ba stsal te |&nbsp;</span><span id='3204484bi' class='paragraph'>
+						 bdag dge sloṅ (5) ’char kas ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba zla ba phyed bcabs pa’i spo ba spyad lags | ltuṅ ba bar ma ltuṅ ba sṅam daṅ ’dra ba byuṅ ba bcabs pa’i gźi nas spo ba spyad lags | ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba gźi (6) nas bslaṅ ba’i spo ba spyad lags | źag drug gi mgu bar bgyi ba spyad lags te | dge ’dun las dbyuṅ ba gsol na |&nbsp;</span><span id='3204485bi' class='paragraph'>
+						 dge ’dun btsun pa thugs brtse ba can thugs brtse ba ñe bar bzuṅ ste | bdag dge sloṅ ’char ka ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag (7) ma’i ltuṅ ba zla ba pyed bcabs pa’i spo ba spyad lags | ltuṅ ba bar ma stuṅ ba sṅa ma daṅ ’dra ba byuṅ ba bacabasapa’i gźi nas spo ba spyad lags | ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba gźi nas bslaṅ ba’i spo ba spyad lags | źag drug gi mgu bar bgyi ba spyad (162b1) lags na dbyuṅ bar gsol | de skad lan gñis lan gsum du brjod par bya’o ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3205389bi' class='paragraph'>
+							.&nbsp;</span><span id='3205390bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205391bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205392bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205393bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205394bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205395bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205396bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205397bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205398bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205399bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205400bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205401bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205402bi' class='paragraph'>
+						 .&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3204944bi' class='paragraph'>
+							tataḥ paścād ekena bhikṣuṇā jñaptiṃ kṛtvā karma kartavyaṃ | śṛṇotu bhadantāḥ saṃghaḥ |&nbsp;</span><span id='3204945bi' class='paragraph'>
+						 ayam udāyī bhikṣuḥ saṃghāvaśeṣām āpattim āpannaḥ saṃcintyaśukravisṛṣṭisamutthitām ardhamāsapraticchannāṃ |&nbsp;</span><span id='3204946bi' class='paragraph'>
+						 tenānena udāyinā bhikṣuṇā (301r1 = GBM 914) asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ saṃghād ardhamāsaparivāso yācitaḥ |&nbsp;</span><span id='3204947bi' class='paragraph'>
+						 datto ’sya saṃghenodāyino bhikṣor asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyā ardhamāsaṃ parivāsaḥ |&nbsp;</span><span id='3204948bi' class='paragraph'>
+						 so ’yaṃ pārivāsika eva san* saṃghāvaśeṣām āpattim āpannaḥ antarāpattiṃ pūrvāpattipratirūpāṃ praticchannāṃ |&nbsp;</span><span id='3204949bi' class='paragraph'>
+						 tenānena udāyinā bhikṣuṇā asyāḥ saṃghāvaśeṣāyā āpatter antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāso yācitaḥ |&nbsp;</span><span id='3204950bi' class='paragraph'>
+						 datto ’sya saṃghena udāyino bhikṣor asyāḥ saṃghāvaśeṣāyā āpatter antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaḥ |&nbsp;</span><span id='3204951bi' class='paragraph'>
+						 so ’yaṃ mūlapārivāsika eva san* saṃghāvaśeṣām āpattim āpannaḥ pratyantarāpattim antarāpattipratirūpāṃ praticchannāṃ |&nbsp;</span><span id='3204952bi' class='paragraph'>
+						 tenānena udāyinā bhikṣuṇā asyāḥ saṃghāvaśeṣāyāḥ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyāḥ saṃghān mūlāpakarṣo yācitaḥ |&nbsp;</span><span id='3204953bi' class='paragraph'>
+						 datto ’sya saṃghena udāyino bhikṣor asyāḥ saṃghāvaśeṣāyāḥ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaḥ |&nbsp;</span><span id='3204954bi' class='paragraph'>
+						 tenānena udāyinā bhikṣuṇā asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsenāntarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitena pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitena saṃghāt* ṣaḍrātramānāpyaṃ yācitaṃ |&nbsp;</span><span id='3204955bi' class='paragraph'>
+						 dattam asya saṃghena udāyino bhikṣor asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsasyāntarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitasya pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitasya ṣaḍrātraṃ cīrṇamānāpyaṃ |&nbsp;</span><span id='3204956bi' class='paragraph'>
+						 so ’yam udāyī bhikṣur asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsaḥ antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitaḥ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitaḥ ṣaḍrātraṃ caritamānāpyaṃ saṃghād āvarhaṇaṃ yācate |&nbsp;</span><span id='3204957bi' class='paragraph'>
+						 sacet saṃghasya prāptakālaṃ kṣametānujānīyāt saṃgho yat saṃghaḥ udāyinaṃ bhikṣum asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsam antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitaṃ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitaṃ ṣaḍrātraṃ caritamānāpyam āvarhed iti | eṣā jñaptiḥ ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='3204486bi' class='paragraph'>
+							de’i ’og tu dge sloṅ gcig gis gsol ba byas te las bya’o || dge ’dun btsun pa rnams gsan du gsol ||&nbsp;</span><span id='3204487bi' class='paragraph'>
+						 dge sloṅ ’char ka ’di ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun (2) lhag ma’i ltuṅ ba byuṅ ba zla ba phyed bcabs te |&nbsp;</span><span id='3204488bi' class='paragraph'>
+						 dge sloṅ ’char ka ’dis ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ma’i ltuṅ ba zla ba phyed bcabs pa dge ’dun las zla ba phyed kyi spo ba gsol te |&nbsp;</span><span id='3204489bi' class='paragraph'>
+						 dge ’dun gyis dge sloṅ ’char ka ’di ched du bsams te khu ba (3) phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba byuṅ ba zla ba phyed bcabs pa zla ba phyed kyi spo ba stsal te |&nbsp;</span><span id='3204490bi' class='paragraph'>
+						 ’di spo ba bgyid bźin pa las dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma ltuṅ bsda ma daṅ ’dra ba byuṅ ba bcabs te |&nbsp;</span><span id='3204491bi' class='paragraph'>
+						 dge sloṅ ’char ka ’di sa dge ’dun lhag ba ltuṅ (4) ba bar ma ltuṅ ba sṅa ma dag ’dra ba byuṅ ba bcabs pa dge ’dun las gźi nas spo ba gsol te |&nbsp;</span><span id='3204492bi' class='paragraph'>
+						 dge ’dun gyis dge sloṅ ’char ka ’di dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma ltuṅ ba sda ma daṅ ’dra ba byuṅ ba bcabs pa la gźi nas spo ba stsal te |&nbsp;</span><span id='3204493bi' class='paragraph'>
+						 ’di gźi nas spo ba bgyid (5) bźin pa las dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas te byuṅ ba bcabs nas |&nbsp;</span><span id='3204494bi' class='paragraph'>
+						 dge sloṅ ’char ka ’dis dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas te byuṅ ba bcabs pa dge ’dun las gźi nas bslaṅ ba gsol te |&nbsp;</span><span id='3204495bi' class='paragraph'>
+						 dge ’dun (6) gyis dge sloṅ ’char ka ’di dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas te byuṅ ba bcabs pa la gźi nas bslaṅ ba stsal te |&nbsp;</span><span id='3204496bi' class='paragraph'>
+						 dge sloṅ ’char ka ’dis dge ’dun lhag ma’i ltuṅ ba gźi nas bslaṅ ba spyad lags nas | dge ’dun las źag drug gi mgu bar bgyi (7) ba gsol te |&nbsp;</span><span id='3204497bi' class='paragraph'>
+						 dge ’dun gyis dge sloṅ ’char ka ’di ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba byuṅ ba zla ba phyed bcabs pa’i spo ba spyad lags | ltuṅ ba bar ma ltuṅ ba sṅa ma daṅ ’dra ba byuṅ ba bcabs pa’i gźi nas spo ba spyad lags | ltuṅ ba (163a1) bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba’i gźi nas bslaṅ ba spyad lags pa la źag drug gi mgu bar bgyi ba stsal te |&nbsp;</span><span id='3204498bi' class='paragraph'>
+						 dge sloṅ ’char ka ’di ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba byuṅ ba zla ba phyed bcabs pa’i spob spyad (2) lags | ltuṅ ba bar ma ltuṅ ba sṅa ma daṅ ’dra ba byuṅ ba bcabs pa’i gźi nas spo ba spyad lags | ltuṅ ba bar ma dag ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba’i gźi nas bslaṅ ba spyad lags | źag drug gi mgu bar bgyi bar spyad lags nas dge ’dun las dbyuṅ ba gsol na |&nbsp;</span><span id='3204499bi' class='paragraph'>
+						 (3) gal te dge ’dun gyi dus la ba ba ciṅ ba thod na dge ’dun gyis gnaṅ bar mdzod cig daṅ | dge ’dun gyis dge sloṅ ’char ka ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba byuṅ ba zla ba phyed bcabs pa’i sbo ba spyad lags | ltuṅ ba ra ma ltuṅ ba (4) sṅam daṅ ’dra ba byuṅ ba bcabs pa’i gźi nas spo ba spyad lags | ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ pa’i gźi nas bslaṅ ba spyad lags | źag drug gi mgu bar bgyib spyad lags pa dbyuṅ bar mdzad do || ’di ni gsol ba’o ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3205403bi' class='paragraph'>
+							.&nbsp;</span><span id='3205404bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205405bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205406bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205407bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205408bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205409bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205410bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205411bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205412bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205413bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205414bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205415bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205416bi' class='paragraph'>
+						 .&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3204958bi' class='paragraph'>
+							tataḥ paścād avasādayitavyaḥ | na (301v1 = GBM 915) sādhūdāyin kṛtaṃ na suṣṭhu kṛtaṃ |&nbsp;</span><span id='3204959bi' class='paragraph'>
+						 katham idānīṃ tvaṃ tasya bhagavatas tathāgatasyārhataḥ samyaksaṃbuddhasyaivaṃ rāgavirāgāya cetovimuktaprajñāvimukte dharme deśyamāne dveṣavirāgāya mohavirāgāya cetovimuktaprajñāvimukte dharme deśyamāne idam evaṃrūpam aprāsādikaṃ kṛtam akārṣīḥ |&nbsp;</span><span id='3204960bi' class='paragraph'>
+						 varaṃ khalu te mohapuruṣa āśīviṣo ghoraviṣaḥ kṛṣṇasarpas tīkṣṇaviṣaḥ ubhābhyāṃ pāṇibhyāṃ pratigṛhīto ’bhaviṣyat* na tv evam idam evaṃrūpam aprāsādikaṃ kṛtaṃ |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='3204500bi' class='paragraph'>
+							de’i ’og tu smad bab par (5) bya ste | ’char ka khyod da ci ste de lta bur byed | legs par ma byas so || śin tu ba byas so ||&nbsp;</span><span id='3204501bi' class='paragraph'>
+						 bcom ldan ’das de bźin gśegs pa dgra bcom ba yaṅ dag par rdzogs pa’i saṅs rgyas de’i chos ni ’di ltar ’dod chags daṅ bral bar bya ba’i phyir sems rnam par grol ba (6) daṅ || śes rab rnam par grol ba’i chos ston ciṅ | źe sṅaṅ daṅ bral bar bya ba daṅ | gti mug daṅ bral bar bya ba’i phyir sems rnam bar grol pa daṅ | śes rab rnam par grol pa’i chos ston bźin du ’di lta bu’i mi mdzes pa byas so ||&nbsp;</span><span id='3204502bi' class='paragraph'>
+						 mi blun po khyod kyis sgrul nag po dug (7) rnon bo can la lag pa gñis kyis bzuṅ ba ni bla’i | khyod ’di lta bu’i mi mdzes ba byed ba ni de lta ma yin no ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3205417bi' class='paragraph'>
+							.&nbsp;</span><span id='3205418bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205419bi' class='paragraph'>
+						 .&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3204961bi' class='paragraph'>
+							dvāv imau dharmolkāṃ nirvāpayataḥ dharmālokaṃ dharmābhāṃ dharmaprabhāṃ dharmāvabhāsaṃ dharmapradīpaṃ dharmapradyotaṃ |&nbsp;</span><span id='3204962bi' class='paragraph'>
+						 katamau dvau | yaś cāpattim āpadyate yaś cāpattim āpanno yathādharmaṃ na pratikaroti || dvāv aghamūlaṃ na khanataḥ pratisroto na vyāyacchato na saritāṃ latāṃ śoṣayato na māraṃ yodhayato na māradhvajaṃ pātayato na dharmadhvajam ucchrāpayato na pāpīyasaḥ śrotaś chedayato na tathāgatasya dharmyaṃ dharmacakraṃ pravartitam anupravartayataḥ |&nbsp;</span><span id='3204963bi' class='paragraph'>
+						 katamau dvau | yaś cāpattim āpadyate yaś cāpattim āpanno yathādharmaṃ na pratikaroti |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='3204503bi' class='paragraph'>
+							’char ka gñis po ’di dag ni chos kyi sgron ma daṅ | chos kyi snaṅ ba daṅ | chos kyi ’od daṅ | chos kyi gsal ba daṅ | chos kyi snaṅ gsal daṅ | chos kyi mar me daṅ (163b1) chos kyi rab gsal med bar byed pa yin te |&nbsp;</span><span id='3204504bi' class='paragraph'>
+						 gñis gaṅ źe na | gaṅ źig ltuṅ ba ’byin ba daṅ | gaṅ źig ltuṅ ba byuṅ nas phyir chos bźin mi ’chos pa’o || gñis ni sdig pa rtsa nas mi rko | rgyun nas bzlog pa la mi ’bad | ’bab chu daṅ | ’khri śiṅ mi skems | bdud (2) daṅ g-yul mi ’gyed | bdud kyi chul mtshan mi sñol | chos kyi rgyal mtshan mi sgreṅ | de bźin gśegs pa’i chos daṅ mthun pa’i chos kyi ’khor lo bskor ba’i rjes su mi skor ba yin te |&nbsp;</span><span id='3204505bi' class='paragraph'>
+						 gñis gaṅ źig ltuṅ ba ’byin pa daṅ | gaṅ źig ltuṅ ba byuṅ nas (3) phyir chos bźin mi ’chos pa’o ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3205420bi' class='paragraph'>
+							.&nbsp;</span><span id='3205421bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205422bi' class='paragraph'>
+						 .&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3204964bi' class='paragraph'>
+							anayā tvam udayinn āpattyā adeśitayā apratideśitayā abhavyo ’nityasaṃjñāyā anitye duḥkhasaṃjñāyā duḥkhe anātmasaṃjñāyā āhāre pratikūlasaṃjñāyāḥ sarvaloke anabhiratisaṃjñāyā ādīnavasaṃjñāyāḥ prahāṇasaṃjñāyā virāgasaṃjñāyā nirodhasaṃjñāyā maraṇasaṃjñāyā aśubhasaṃjñāyā vinīlakasaṃjñāyā vipūyakasaṃjñāyā vyādhmātakasaṃjñāyā vipaḍumakasaṃjñāyā vikhāditakasaṃjñāyā vilohitakasaṃjñāyā asthisaṃjñāyā vikṣiptakasaṃjñāyāḥ śūnyatāpratyavekṣaṇasaṃjñāyāḥ | abhavyaḥ prathamasya dhyānasya dvitīyasya tṛtīyasya dhyānasya caturthasya maitryāḥ karuṇāyā muditāyā upekṣāyā ākāśānantyāyatanasya vijñānānantyāyatanasya ākiṃcanyāyatanasya naivasaṃjñānāsaṃjñāyatanasya srotaāpattiphalasya sakṛdāgāmiphalasya anāgāmiphalasya ṛddhiviṣayasya divyasya śrotrasya cetaḥparyāyasya pūrvanivāsasya cyutyupapādasyāsravakṣayasya |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='3204506bi' class='paragraph'>
+							’char ka ltuṅ ba ma bśags śiṅ so sor ma bśags pa ’dis khyod mi rtag pa’i ’du śes daṅ | mi rtag pa la sdug bsṅal ba’i ’du śes daṅ | sdug bsṅal ba la bdag med pa’i ’du śes daṅ | zas la mi mthun pa’i ’du śes daṅ | (4) ’jig rten thams cad la mgon bar mi dga’ ba’i ’du śes daṅ | ñes dmigs kyi ’du śes daṅ | spoṅ ba’i ’du śes daṅ | ’dod chags daṅ bral ba’i ’du śes daṅ | ’gog pa’i ’du śes daṅ | ’chi ba’i ’du śes daṅ | mi gtsaṅ ba’i ’du śes daṅ | rnam bar (5) sṅos pa’i ’du śes daṅ | rnam par rnags pa’i ’du śes daṅ | rnam par ba ma pa’i ’du śes daṅ | rnam par ’bus gźigs pa’i ’du śes daṅ | rnam par zos pa’i ’du śes daṅ | rnam par dmar pa’i ’du śes daṅ | rus goṅ gi ’du śes daṅ | rnams par ’thor (6) ba’i ’du śes daṅ | stoṅ pa ñid du so sor rtog pa’i ’du śes kyi snod du mi ’gyur źiṅ | bsam gtan daṅ po daṅ | gñis pa daṅ | gsum pa daṅ | bźi pa daṅ | byams pa daṅ | sñiṅ rje daṅ | dga’ ba daṅ | btaṅ sñoms daṅ | nam mkha’ mtha’ yas skye mched daṅ | (7) rnam śes mtha’ yaṅ skye mched daṅ | ci yaṅ med pa’i skye mched daṅ | ’du śes med ’du śes med min skye mched daṅ | rgyun du źugs pa’i ’bras bu daṅ | lan gcig phyir ’oṅ ba’i ’bras bu daṅ | phyir mi ’oṅ ba’i ’bras bu daṅ | rdzu ’phrul gyi yul daṅ | lha’i rna ba daṅ | (164a1) sems kyi rnam graṅs daṅ | sṅon gyi gnas daṅ | ’chi ’pho daṅ | skye ba daṅ | zag pa zad pa dag gi snod du mi ’gyur ro ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3205423bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3204965bi' class='paragraph'>
+							anayā te udāyinn āpattyā adeśitayā apratideśitayā dvayor gatyor anyatarānyatarā gatiḥ pratikāṃkṣitavyā narakā vā tiryaṃco vā ||&nbsp;</span><span id='3204966bi' class='paragraph'>
+						 uktaṃ bhagavatā dve praticchannakarmāntasya gatī narakā vā tiryaṃco vā | ye me bhāṣitaṃ na śraddhāsyanti te praticchādayitavyaṃ maṃsyante ·&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='3204507bi' class='paragraph'>
+							’char ka lcaṅ ba mi ’chags pa daṅ | so sor mi ’chags ba ’dis ni khyod ’gro ba gñis las gaṅ yaṅ ruṅ bźig ’dod par bya ste | (2) dmyal ba’am dud ’gro’o ||&nbsp;</span><span id='3204508bi' class='paragraph'>
+						 bcom ldan ’das kyis ’chab pa’i las kyi mtha’ ni ’gro ba gñis po dmyal ba’am | dud ’gro yin te | ṅag dag ṅas gsuṅs pa la yid mi ches pa de dag ni ’chab par sems so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3205424bi' class='paragraph'>
+							.&nbsp;</span><span id='3205425bi' class='paragraph'>
+						 .&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3204967bi' class='paragraph'>
+							śṛṇotu bhadantāḥ saṃghaḥ |&nbsp;</span><span id='3204968bi' class='paragraph'>
+						 ayam udāyī bhikṣuḥ saṃghāvaśeṣām āpattim āpannaḥ saṃcintyaśukravisṛṣṭisamutthitām ardhamāsapraticchannāṃ |&nbsp;</span><span id='3204969bi' class='paragraph'>
+						 tenānena udāyinā bhikṣuṇā asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ saṃghād ardhamāsaṃ parivāso yācitaḥ |&nbsp;</span><span id='3204970bi' class='paragraph'>
+						 datto ’sya saṃghena udāyino bhikṣor asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyā ardhamāsaṃ parivāsaḥ |&nbsp;</span><span id='3204971bi' class='paragraph'>
+						 so ’yaṃ pārivāsika eva san* saṃghāvaśeṣām āpattim āpanno ’ntarāpattiṃ pūrvāpattipratirūpāṃ praticchannāṃ |&nbsp;</span><span id='3204972bi' class='paragraph'>
+						 tenānena udāyinā bhikṣuṇā asyāḥ saṃghāvaśeṣāyā āpatteḥ antarāpatteḥ (302r1 = GBM 916) pūrvāpattipratirūpāyāḥ praticchannāyāḥ saṃghān mūlaparivāso yācitaḥ |&nbsp;</span><span id='3204973bi' class='paragraph'>
+						 datto ’sya saṃghena udāyino bhikṣor asyāḥ saṃghāvaśeṣāyā āpatteḥ antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaḥ |&nbsp;</span><span id='3204974bi' class='paragraph'>
+						 so ’yaṃ mūlapārivāsika eva san* saṃghāvaśeṣām āpattim āpannaḥ pratyantarāpattim antarāpattipratirūpāṃ praticchannāṃ |&nbsp;</span><span id='3204975bi' class='paragraph'>
+						 tenānena udāyinā bhikṣuṇā asyāḥ saṃghāvaśeṣāyā āpatteḥ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyāḥ saṃghān mūlāpakarṣo yācitaḥ |&nbsp;</span><span id='3204976bi' class='paragraph'>
+						 datto ’sya saṃghena udāyino bhikṣor asyāḥ saṃghāvaśeṣāyāḥ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaḥ |&nbsp;</span><span id='3204977bi' class='paragraph'>
+						 tenānena udāyinā bhikṣuṇā asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsenāntarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitena pratyantarāpatteḥ antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitena saṃghāt ṣaḍrātraṃ mānāpyaṃ yācitaṃ |&nbsp;</span><span id='3204978bi' class='paragraph'>
+						 dattam asya saṃghena udāyino bhikṣor asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsasyāntarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitasya pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitasya ṣaḍrātraṃ mānāpyaṃ | so ’yam udāyī bhikṣur asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsaḥ antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitaḥ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitaḥ ṣaḍrātraṃ caritamānāpyaṃ saṃghād āvarhaṇaṃ yācate |&nbsp;</span><span id='3204979bi' class='paragraph'>
+						 tat saṃgha udāyinaṃ bhikṣum asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsam antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitaṃ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitaṃ ṣaḍrātraṃ caritamānāpyam āvarhati |&nbsp;</span><span id='3204980bi' class='paragraph'>
+						 yeṣām āyuṣmatāṃ kṣamate udāyinaṃ bhikṣum asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā ardhamāsapraticchannāyāḥ paryuṣitaparivāsam antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitaṃ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitaṃ ṣaḍrātraṃ caritamānāpyam āvarhituṃ te tūṣṇīṃ na kṣamate bhāṣantāṃ |&nbsp;</span><span id='3204981bi' class='paragraph'>
+						 iyaṃ prathamā karmavācanā | evaṃ dvitīyā tṛtīyā karmavācanā kartavyā ·&nbsp;</span><span id='3204982bi' class='paragraph'>
+						 āvarhitaḥ saṃghena udāyī bhikṣur asyāḥ saṃghāvaśeṣāyā āpatteḥ saṃcintyaśukravisṛṣṭisamutthitāyā (302v1 = GBM 917) ardhamāsapraticchannāyāḥ paryuṣitaparivāsaḥ antarāpatteḥ pūrvāpattipratirūpāyāḥ praticchannāyā mūlaparivāsaparyuṣitaḥ pratyantarāpatter antarāpattipratirūpāyāḥ praticchannāyā mūlāpakarṣaparyuṣitaḥ ṣaḍrātraṃ caritamānāpyaṃ |&nbsp;</span><span id='3204983bi' class='paragraph'>
+						 kṣāntam anujñātaṃ saṃghena yasmāt tūṣṇīm evam etad dhārayāmi ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='3204509bi' class='paragraph'>
+							las bya ba ni dge ’dun btsun pa rnams gsan du gsol |&nbsp;</span><span id='3204510bi' class='paragraph'>
+						 (3) dge sloṅ ’acara ka ’di ched du bsams te khu ba phyuṅ las gyur pa’i dge ’dun lhag ma’i ltuṅ ba byuṅ ba zla ba phyed bcabs te&nbsp;</span><span id='3204511bi' class='paragraph'>
+						 dge sloṅ ’char ka ’di sa ched du bsams te khu pa phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba byuṅ ba zla ba phyed bcabs pa dge ’dun las zla ba phyed (4) kyi spo ba gsol te |&nbsp;</span><span id='3204512bi' class='paragraph'>
+						 dge ’dun gyis dge sloṅ ’char ka ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba byuṅ ba zla phyed bcabs pa la zla ba phyed kyi spo ba stsal te |&nbsp;</span><span id='3204513bi' class='paragraph'>
+						 ’di spo ba bgyid bźin pa las dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma ltuṅ ba sṅa ma (5) daṅ ’dra ba byuṅ ba bcabs te |&nbsp;</span><span id='3204514bi' class='paragraph'>
+						 dge sloṅ ’char ka ’dis dge ’dun lhag ma’i ltuṅ ba bar ma ltuṅ ba sṅa ma daṅ ’dra ba byuṅ ba sṅa ma daṅ ’dra ba byuṅ ba bcabs pa las gźi nas spo ba gsol te |&nbsp;</span><span id='3204515bi' class='paragraph'>
+						 dge ’dun gyis dge sloṅ ’char ka la dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma ltuṅ ba sṅa ma daṅ (6) ’dra ba byuṅ ba bcabs pa la gźi nas spo ba stsal te ||&nbsp;</span><span id='3204516bi' class='paragraph'>
+						 ’di gźi nas spo ba bgyid bźin pa las dge ’dun lhag ma’i ltuṅ ba ltuṅ ba ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas te byuṅ ba bcabs nas&nbsp;</span><span id='3204517bi' class='paragraph'>
+						 dge sloṅ ’char ka ’dis dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas (7) te byuṅ ba bcabs pa dge ’dun las gźi nas bslaṅ ba gsol te |&nbsp;</span><span id='3204518bi' class='paragraph'>
+						 dge ’dun gyis dge sloṅ ’char ka la dge ’dun lhag ma’i ltuṅ ba ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas te byuṅ ba bcabs pa la gźi nas bslaṅ ba stsal te |&nbsp;</span><span id='3204519bi' class='paragraph'>
+						 dge sloṅ ’char ka ’dis ched du bsams te khu (164b1) pa phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba zla ba phyed bcabs pa’i spo ba spyad lags | ltuṅ ba bar ma ltuṅ ba sṅa ma daṅ ’dra ba byuṅ ba bcabs pa’i gźi nas spo ba spyad lags | ltud ba bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba’i gźi nas bslaṅ ba spyad lags te | (2) dge ’dun las źag drug gi mgu bar bgyi ba gsol nas |&nbsp;</span><span id='3204520bi' class='paragraph'>
+						 dge ’dun gyis dge sloṅ ’char ka ched du bsams te khu ba phyuṅ pa’i dge ’dun lhag ma’i ltuṅ ba byuṅ ba zla ba phyed bcabs pa’i spo ba spyad lags | ltuṅ ba bar ma ltuṅ ba sṅa ba sṅa ma daṅ ’dra ba byuṅ ba bcabs pa’i gźi (3) nas spo ba spyad lags | ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba byuṅ ba’i gźi nas bslaṅ ba spyad lags pa la źag drug gi mgu bar bgyi ba stsal te | dge sloṅ ’char ka ’di ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba byuṅ ba zla ba phyed bcabs (4) pa’i spo ba spyad lags | ltuṅ ba par ma ltuṅ ba sṅa ma daṅ ’dra ba byuṅ ba bcabs pa’i gźi nas spo ba spyad lags | ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba’i gźi nas bslaṅ ba spyad lags | źag drug gi mgu bar bgyi ba spyad lags nas | dge ’dun las (5) dbyuṅ ba gsol te |&nbsp;</span><span id='3204521bi' class='paragraph'>
+						 de’i slad du dge ’dun gyis dge sloṅ ’char ka ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba zla ba phyed bcabs pa’i spo ba spyad lags | ltuṅ ba bar ma ltuṅ ba sṅa ma daṅ ’dra ba byuṅ ba bcabs pa’i gźi nas spo ba spyad lags | (6) ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba’i gźi nas bslaṅ ba spyad lags | źag drug gi mgu bar bgyi ba spyad lags pa dbyuṅ ba mdzad na |&nbsp;</span><span id='3204522bi' class='paragraph'>
+						 tshe daṅ ldan pa gaṅ dag dge sloṅ ’char ka ’di ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba byuṅ ba (7) zla ba phyed bcabs pa’i spo ba spyad lags | ltuṅ ba bar ma ltuṅ bsṅa ma daṅ ’dra ba byuṅ ba bcabs pa’i gźi nas spo ba spyad lags | ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba’i gźi nas bslaṅ ba spyad lags | źag drug gi mgu bar bgyi ba spyad lags pa dbyuṅ (165a1) bar mdzad par bzod pa de dag ni caṅ ma gsuṅ śig | gaṅ dag mi bzod pa de dag ni gsuṅ śig |&nbsp;</span><span id='3204523bi' class='paragraph'>
+						 ’di ni las brjod pa dag po yin te | de bźin du las brjod pa gñis daṅ | gsum gyi bar du brjod par bya’o ||&nbsp;</span><span id='3204524bi' class='paragraph'>
+						 dge ’dun gyis bzod ciṅ gnaṅ nas dge ’dun gyis (2) dge sloṅ ’char ka ched du bsams te khu ba phyuṅ ba las gyur pa’i dge ’dun lhag ma’i ltuṅ ba zla ba phyed bcabs pa’i spo ba spyad lags | ltuṅ ba bar ma ltuṅ ba sṅa ma daṅ ’dra ba byuṅ ba bcabs pa’i gźin nas spo ba spyad lags | ltuṅ ba bar ma daṅ ’dra ba yaṅ bzlas pa’i ltuṅ ba byuṅ ba’i (3) gźi nas bslaṅ ba spyad lags | źag drug gi mgu bar bgyi ba spyad lags pa dbyuṅ bar mdzad lags te |&nbsp;</span><span id='3204525bi' class='paragraph'>
+						 ’di ltar caṅ mi gsuṅ bas de de bźin du ’dzin to ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3205426bi' class='paragraph'>
+							.&nbsp;</span><span id='3205427bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205428bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205429bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205430bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205431bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205432bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205433bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205434bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205435bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205436bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205437bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205438bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205439bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205440bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205441bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205442bi' class='paragraph'>
+						 .&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3204984bi' class='paragraph'>
+							tataḥ paścād utsāhayitavyaḥ | sādhu udāyin kṛtaṃ suṣṭhu kṛtaṃ |&nbsp;</span><span id='3204985bi' class='paragraph'>
+						 dvau paṇḍitau dvau vyaktau dvau satpuruṣau | yaś cāpattiṃ nāpadyate yaś cāpattim āpanno yathādharmaṃ pratikaroti |&nbsp;</span><span id='3204986bi' class='paragraph'>
+						 dvau dharmolkāṃ prajvālayato dharmālokaṃ dharmābhāṃ dharmaprabhāṃ dharmāvabhāsaṃ dharmapradīpaṃ dharmapradyotaṃ |&nbsp;</span><span id='3204987bi' class='paragraph'>
+						 katamau dvau | yaś cāpattiṃ nāpadyate yaś cāpattim āpanno yathādharmaṃ pratikaroti ||&nbsp;</span><span id='3204988bi' class='paragraph'>
+						 dvāv aghamūlaṃ khanataḥ pratisroto vyāyacchataḥ saritāṃ latāṃ śoṣayato māraṃ yodhayato māradhvajaṃ pātayato dharmadhvajam ucchrāpayataḥ pāpīyasaḥ srotaḥ chedayatas tathāgatasya dharmyaṃ dharmacakraṃ pravartitam anupravartayataḥ |&nbsp;</span><span id='3204989bi' class='paragraph'>
+						 katamau dvau | yaś cāpattiṃ nāpadyate yaś cāpattim āpanno yathādharmaṃ pratikaroti |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='3204526bi' class='paragraph'>
+							de’i ’og tu spro ba bskyed par bya ste | ’char ka legs par byas so || śin tu byas so |&nbsp;</span><span id='3204527bi' class='paragraph'>
+						 skyed bu dam pa gñis ni mkhas (4) ba | gñis ni gsal ba ste | gaṅ źig ltuṅ ba mi ’byin pa daṅ | gaṅ źig ltuṅ ba byuṅ ba na phyir chos bźin byed pa’o ||&nbsp;</span><span id='3204528bi' class='paragraph'>
+						 gñis po ’di dag ni chos kyi sgron ma daṅ | chos kyi snaṅ ba daṅ | chos kyi ’od daṅ | chos kyi gsal ba daṅ | chos kyi mar me daṅ | chos kyi rab gsal (5) ’bar bar byed pa yin te |&nbsp;</span><span id='3204529bi' class='paragraph'>
+						 gñis gaṅ źe na | gaṅ źig ltuṅ ba mi ’byin pa daṅ | gaṅ źig ltuṅ ba byuṅ ba phyir chos bźin byed pa’o ||&nbsp;</span><span id='3204530bi' class='paragraph'>
+						 gñis ni sdig pa rtsa ba nas rgo ba rgyun nas bzlog pa la ’bad pa | ’bab chu daṅ ’khri śiṅ skems pa | bdud daṅ g-yul ’gyed pa | bdud kyi (6) rgyal mtshan sñol ba | chos kyi rgyal mtshan sgreṅ ba | sdig pa’i rgyun gcod pa | de bźin gśegs pa’i chos daṅ mthun pa’i chos kyi ’khor lo bskor ba’i rjes su skor ba yin te |&nbsp;</span><span id='3204531bi' class='paragraph'>
+						 gñis gaṅ źe na | gaṅ źig ltuṅ ba mi ’byin ba daṅ | gaṅ źig ltuṅ ba byuṅ na phyir chos bźin (7) byed ba’o ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3205443bi' class='paragraph'>
+							.&nbsp;</span><span id='3205444bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205445bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205446bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205447bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205448bi' class='paragraph'>
+						 .&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3204990bi' class='paragraph'>
+							anayā tvam udayinn āpattyā deśitayā pratideśatayā bhavyo ’nityasaṃjñāyā anitye duḥkhasaṃjñāyā duḥkhe anātmasaṃjñāyā āhāre pratikūlasaṃjñāyāḥ sarvaloke anabhiratisaṃjñāyā ādīnavasaṃjñāyāḥ prahāṇasaṃjñāyā virāgasaṃjñāyā nirodhasaṃjñāyā maraṇasaṃjñāyā aśubhasaṃjñāyā vinīlakasaṃjñāyā vipūyakasaṃjñāyā vipaḍumakasaṃjñāyā vyādhmātakasaṃjñāyā vikhāditakasaṃjñāyā vilohitakasaṃjñāyā vikṣiptakasaṃjñāyā asthisaṃjñāyāḥ śūnyatāpratyavekṣaṇasaṃjñāyāḥ · bhavyaḥ prathamasya dhyānasya dvitīyasya tṛtīyasya dhyānasya caturthasya maitryāḥ karuṇāyā muditāyā upekṣāyā ākāśānantyāyatanasya vijñānānantyāyatanasya ākiñcanyāyatanasya naivasaṃjñānāsaṃjñāyatanasya srotaāpattiphalasya sakṛdāgāmiphalasya anāgāmiphalasya riddhiviṣayasya divyasya śrotrasya cetaḥparyāyasya pūrvanivāsasya cyutyupapādasyāsravakṣayasya |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='3204532bi' class='paragraph'>
+							’char ka ltuṅ ba bśags pa daṅ | so sor bśags pa ’dis khyod mi rtag pa’i ’du śes daṅ | mi rtag pa la sdug bsṅal ba’i ’du śes daṅ | sdug bsṅal ba la bdag med pa’i ’du śes daṅ | zas la mi mthun pa’i ’du śes daṅ | ’jig rten thams cad la (165b1) mṅon bar mi dga’ ba’i ’du śes daṅ | ñes dmigs kyi ’du śes daṅ | spoṅ ba’i ’du śes daṅ | ’dod chags daṅ bral ba’i ’du śes dag | ’gog pa’i ’du śes daṅ | ’chi ba’i ’du śes daṅ | mi gtsaṅ ba’i ’du śes daṅ | rnam par sdos pa’i ’du śes daṅ | rnam par (2) rnags pa’i ’du śes daṅ | rnam par ’bus gźigs pa’i ’du śes daṅ | rnam par bam pa’i ’du śes daṅ | rnam par zos pa’i ’du śes daṅ | rnam par dmar ba’i ’du śes daṅ | rus goṅ gi ’du śes daṅ | rnam par ’thor ba’i ’du śes daṅ | stoṅ pa ñid du so sor rtog (3) ba’i ’du śes daṅ | bsam gtan daṅ po daṅ | gñis pa daṅ | gsum pa daṅ | bźi pa daṅ | byams pa daṅ | sñiṅ rje daṅ | dga’ ba daṅ | btaṅ sñoms daṅ | nam mkha’ mtha’ yas skye mched daṅ | rnam śes mtha’ yas skye mched daṅ | ci yaṅ med pi skye mched daṅ | (4) ’du śes med ’du śes med min skye mched daṅ | rgyun du źugs pa’i ’bras bu daṅ | lan gicaga phyir ’oṅ pa’i ’bras bu daṅ | phyir mi ’oṅ ba’i ’bras bu daṅ | rdzu ’phrul gyi yul daṅ | lha’i rna ba daṅ | sems kyi rnam graṅs daṅ | sṅon gyi gnas daṅ | ’chi ’pho ba daṅ | skye ba daṅ (5) thag pa zad pa rnams kyi snod du ’gyur ro ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3205449bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3204991bi' class='paragraph'>
+							anayā te udāyinn āpattyā deśitayā pratideśitayā dvayor gatyor anyatarānyatarā gatiḥ pratikāṃkṣitavyā devā vā manuṣyā vā ||&nbsp;</span><span id='3204992bi' class='paragraph'>
+						 uktaṃ bhagavatā dve apraticchannakarmāntasya gatī devā vā manuṣyā vā |&nbsp;</span><span id='3204993bi' class='paragraph'>
+						 ye me bhāṣitaṃ abhiśraddhāsyanti na te praticchādayitavyaṃ manyanta iti |<br />punaś coktaṃ |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='3204533bi' class='paragraph'>
+							’char ka ltuṅ ba bśags pa daṅ | so sor bśags pa ’dis khyod ’gro ba gñis po lha daṅ mi gaṅ yaṅ ruṅ ba’i ’gro ba ’dod par bya’o ||&nbsp;</span><span id='3204534bi' class='paragraph'>
+						 bcom ldan ’das kyis las kyi mtha’ mi ’chab pa’i ’gro ba ni gñis te | lha daṅ mi’o ||&nbsp;</span><span id='3204535bi' class='paragraph'>
+						 gaṅ (6) dgaṅs bśad pa la yid ched pa de dag ni bcab par mi sems se ||<br />yaṅ bka’ stsal pa |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3205450bi' class='paragraph'>
+							.&nbsp;</span><span id='3205451bi' class='paragraph'>
+						 .&nbsp;</span><span id='3205452bi' class='paragraph'>
+						 .&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3204994bi' class='paragraph'>
+							channam evābhivarṣati vivṛtaṃ nābhivarṣati ·<br />tasmāc channaṃ vivṛṇuyād evaṃ taṃ nābhivarṣati ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='3204536bi' class='paragraph'>
+							bcabs pa char pa bźin du ’bab || ma bcabs char bźin de mi ’bab ||<br />de bas bcabs pa bśags bya ste || de lta na ni de mi ’bab ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3205453bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3204995bi' class='paragraph'>
+							āvarhitas tvam udāyi saṃghena | apramādena saṃpādaya ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='3204537bi' class='paragraph'>
+							’char ka khyod dge ’dun gyis phyuṅ zin (7) gyis kag yod par sgrubs śig |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3205454bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3204996bi' class='paragraph'>
+							|| pāṇḍulohitakavastu samāptaḥ ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "3204914";
+							kilderef = "Pāṇḍ-v Pāṇḍ-v san  7.5.1 - Pāṇḍ-v san 5.12";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='3204538bi' class='paragraph'>
+							dmar ser can gyi gźi rdzogs sto || ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "3204456";
+							kilderef = "Pāṇḍ-v Derge Kj ’dul ba ga  160b4 - Derge Kj ’dul ba ga 165b7";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='3205455bi' class='paragraph'>
+							.&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "3205373";
+							kilderef = "Pāṇḍ-v Comments  - Comments ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'></div><div class='textvar' style='width:32.333333333333%;'></div><div class='textvar' style='width:32.333333333333%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=bfd6e391-1f9e-11e4-856a-001cc4ddf0f4</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

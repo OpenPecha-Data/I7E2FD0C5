@@ -1,0 +1,72 @@
+id: I7E2FD0C5
+source: https://www2.hf.uio.no/polyglotta/index.php?page=library&bid=2
+source_file: null
+initial_creation_type: input
+imported: '2022-05-27T17:22:25.877529'
+last_modified: '2022-05-27T17:22:25.877544'
+parser: null
+source_metadata:
+  title: 'MSV 1,11: Pāṇḍulohitakavastu'
+  language: sa
+  base:
+    f822A:
+      title: Pratikriyāvastūddāna
+      base_file: f822A.txt
+      order: 1
+    fA320:
+      title: Pāṇḍulohitakavastūddāna
+      base_file: fA320.txt
+      order: 2
+    f7713:
+      title: 'Pāṇḍulohitaka: tarjanīyaṃ karma'
+      base_file: f7713.txt
+      order: 3
+    fA00B:
+      title: 'Śreyaka: nigarhanīyaṃ karma'
+      base_file: fA00B.txt
+      order: 4
+    f8BDA:
+      title: 'Aśvaka & Punarvasaka: pravāsanīyaṃ karma'
+      base_file: f8BDA.txt
+      order: 5
+    f8086:
+      title: 'Uttara: pratisaṃharanīyaṃ karma'
+      base_file: f8086.txt
+      order: 6
+    f56EE:
+      title: 'Chanda: 1. āpatter adarśanāyotkṣepaṇīyaṃ karma, 2. āpatter apratikarmāyotkṣepaṇīyaṃ
+        karma'
+      base_file: f56EE.txt
+      order: 7
+    fC8B6:
+      title: 'Ariṣṭa: apratiniḥsṛṣṭe pāpake dṛṣṭigata utkṣepaṇīyaṃ karma'
+      base_file: fC8B6.txt
+      order: 8
+    fEFB5:
+      title: 'Udayin: parivāsa'
+      base_file: fEFB5.txt
+      order: 9
+    fD28E:
+      title: 'Udayin: mūlaparivāsa'
+      base_file: fD28E.txt
+      order: 10
+    f8738:
+      title: 'Udayin: mūlāpakaṛṣa'
+      base_file: f8738.txt
+      order: 11
+    f6382:
+      title: 'Udayin: mānāpya'
+      base_file: f6382.txt
+      order: 12
+    f5FA5:
+      title: 'Udayin: āvarhaṇa'
+      base_file: f5FA5.txt
+      order: 13
+  chapter_to_tile: {}
+statistics: {}
+quality: {}
+copyright:
+  status: Unknown
+  notice: ''
+  info_url: null
+license: null
